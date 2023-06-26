@@ -1,5 +1,6 @@
 package PomObject;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.GenericUtilities.JavaUtility;
 
-public class Loginpage {
+public final class Loginpage {
 	@FindBy(xpath = "//div[@class='col-md-6 col-sm-6 sign-in']/child::form/div[1]//input[@name='email']")
 	private WebElement emailAdd;
 	
@@ -19,6 +20,9 @@ public class Loginpage {
 	
 	@FindBy(name="fullname")
 	private WebElement fulnam;
+	
+	String textField="//span[text()='%s']/../following-sibling::div//input";
+	String radioButton="//span[text()='%s']";
 	
 	@FindBy(name="emailid")
 	private WebElement emalid;
@@ -36,7 +40,14 @@ public class Loginpage {
 	private WebElement signup;
 	
 	
+	public WebElement getElement(String elementPartialXpath, String replaceData) {
+	return	driver.findElement(By.xpath(String.format(elementPartialXpath, replaceData)));
+	}
+	
+	
+	WebDriver driver;
 	public Loginpage(WebDriver driver) {
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 
@@ -107,13 +118,20 @@ public class Loginpage {
 		 password.sendKeys(PASSWORD);
 		 logbtn.click(); 
 		
-		
+		getElement(radioButton, "round-trip");
 		
 		
 		
 	}
-	
-	
+	/*
+	public static void main(String[] args) {
+		String s="My name is %s";
+//		String ss = s.replace("###", "Mohan");
+		
+		String ss =	String.format(s, "Mohan");
+	System.out.println(ss);
+	}
+	*/
 	
 	
 

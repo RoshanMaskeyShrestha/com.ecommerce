@@ -24,6 +24,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebdriverUtility {
+	//public static File File = null;
 	public void maximizewindow(WebDriver driver) {
 		driver.manage().window().maximize();
 	}
@@ -97,7 +98,7 @@ public class WebdriverUtility {
 	public void acceptAlert(WebDriver driver) {
 		driver.switchTo().alert().accept();
 	}
-	public void cancelAlert(WebDriver driver) {
+	public void cancelAlert(Web0Driver driver) {
 		driver.switchTo().alert().dismiss();
 	}
 	public void switchTowindow(WebDriver driver,String partialTitle) {
@@ -116,12 +117,14 @@ public class WebdriverUtility {
 			}
 		}
 	}
-	public static String getScreenShot(WebDriver driver,String screenShotName) throws Throwable {
+	public  static String getScreenShot(WebDriver driver,String screenShotName) throws Throwable {
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		File src=ts.getScreenshotAs(OutputType.FILE);
 		String path=".\\screenshot\\"+screenShotName+".png";
-		File dst=new File(path);
+		//File dst=new File(".\\screenshot\\"+screenShotName+".png");
+	       File dst=new File(path);
 		FileUtils.copyFile(src, dst);
+		
 		return path;
 	}
 	public void scrollbarAction(WebDriver driver) {

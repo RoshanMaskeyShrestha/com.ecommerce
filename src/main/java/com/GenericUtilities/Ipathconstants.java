@@ -1,6 +1,7 @@
 package com.GenericUtilities;
 
 public interface Ipathconstants {
+	
 	String DBURL="jdbc:mysql://localhost:3306/students";
 	String DBUSERNAME="root";
 	String DBPASSWORD="root";

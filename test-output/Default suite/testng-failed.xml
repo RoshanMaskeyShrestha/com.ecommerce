@@ -3,17 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MyAccount.ProductviewpomTest">
+      <class name="Practisepackage.childWindow">
         <methods>
-          <include name="login"/>
-          <include name="logout"/>
-          <include name="closeBrowser"/>
-          <include name="connecttoDB"/>
-          <include name="Productview"/>
-          <include name="closeDB"/>
-          <include name="openBrowser"/>
+          <include name="prec"/>
         </methods>
-      </class> <!-- MyAccount.ProductviewpomTest -->
+      </class> <!-- Practisepackage.childWindow -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

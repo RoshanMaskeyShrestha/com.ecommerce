@@ -14,6 +14,7 @@ public class nonSelectToConUpdate {
 		int result=0;
 		try {
 		Driver driver=new Driver();
+		DriverManager.registerDriver(driver);
 		con=DriverManager.getConnection("jdbc:mysql://localhost:3306/students","root","root");
 		Statement state = con.createStatement();
 		String query = "insert into emp values(102,73376692,'roshan','maskey');";

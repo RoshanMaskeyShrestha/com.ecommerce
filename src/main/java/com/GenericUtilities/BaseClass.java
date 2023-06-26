@@ -3,20 +3,19 @@ package com.GenericUtilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 
 import PomObject.Homepage;
 import PomObject.Loginpage;
 import io.github.bonigarcia.wdm.WebDriverManager;
-
+@Listeners
 public class BaseClass {
   DatabaseUtility dlib=new DatabaseUtility();
   ExcelUtility elib=new ExcelUtility();
@@ -29,8 +28,9 @@ public class BaseClass {
 	@BeforeSuite
 	public void connecttoDB() throws Throwable {
 		dlib.connecttoDb();
-		 Reporter.log("connect to DB",true);
+		TestNGUtil.log("connect to DB");
 	}
+	
 	@Parameters("browser")
 	@BeforeClass
 	public void openBrowser() throws Throwable {
@@ -52,6 +52,7 @@ public class BaseClass {
 		wlib.maximizewindow(driver);
 		driver.get(URL);
 		wlib.implicitwait(driver);
+	//elib.openExcel();
 		
 		
 	}
@@ -60,24 +61,27 @@ public class BaseClass {
 	public void login() throws Throwable {
 		String USERNAME = flib.readdatafromProperty("username");
 		String PASSWORD = flib.readdatafromProperty("password");
-		Reporter.log("Login page",true);
+		TestNGUtil.log("Login page");
 		
 		Loginpage lp=new Loginpage(driver);
 		lp.login(USERNAME, PASSWORD);
 		
 	}
 	
+	
+	
 	@AfterMethod
 	public void logout() {
-		Reporter.log("logout",true);
+		TestNGUtil.log("logout");
 		Homepage hp=new Homepage(driver);
 		hp.createLogout();
 	}
 	
 	@AfterClass
 	public void closeBrowser() {
-		Reporter.log("Closing Browser",true);
+		TestNGUtil.log("Closing Browser");
 		driver.quit();
+		//elib.closeExcel();
 	}
 	@AfterSuite 
 	public void closeDB() throws Throwable {

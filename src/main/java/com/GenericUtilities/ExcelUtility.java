@@ -4,9 +4,13 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashMap;
 
 import java.lang.Object;
+import java.text.SimpleDateFormat;
+
+import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -17,7 +21,12 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
  *
  */
 
-public class ExcelUtility {
+public final  class ExcelUtility {
+//	public ExcelUtility(){
+//		openExcel();
+//	}
+	
+	private Workbook wb;
 public String readingdatafromExcel(String Sheetname,int rownum,int cellnum) throws Throwable {
 	FileInputStream fis = new FileInputStream(Ipathconstants.Excelpath);
 	Workbook wb = WorkbookFactory.create(fis);
@@ -26,23 +35,38 @@ public String readingdatafromExcel(String Sheetname,int rownum,int cellnum) thro
 	 return value;
 }
 
+public void openExcel() {
+	FileInputStream fis = null;
+	try {
+		fis = new FileInputStream(Ipathconstants.Excelpath);
+	} catch (FileNotFoundException e) {
+		e.printStackTrace();
+	}
+	 try {
+		 wb = WorkbookFactory.create(fis);
+	} catch (EncryptedDocumentException e) {
+		e.printStackTrace();
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+}
+
+//data provider
 public Object[][] readMultipleSetofData(String Sheetname) throws Throwable{
-	FileInputStream fis = new FileInputStream(Ipathconstants.Excelpath);
-	 Workbook wb = WorkbookFactory.create(fis);
 	 Sheet sh = wb.getSheet(Sheetname);
 	 int lastrow = sh.getLastRowNum()+1;
 	 int lastcell = sh.getRow(0).getLastCellNum();
 	 
-	Object[][] value = new Object[lastrow][lastcell];
+	Object[][] obj = new Object[lastrow][lastcell];
 	
 	for(int i=0; i<lastrow; i++)
 	{
 		for(int j=0; j<lastcell; j++)
 		{
-			value[i][j] = sh.getRow(i).getCell(j).getStringCellValue();
+			obj [i][j] = sh.getRow(i).getCell(j).getStringCellValue();
 		}
 	}
-	return value;
+	return obj;
 }
 /**
  * 
@@ -85,7 +109,7 @@ public void writedataintoExcel(String Sheetname,int rownum,int cellnum,String da
  * @return
  * @throws Throwable
  */
-public HashMap<String,String>readmultipleData(String Sheetname) throws Throwable{
+public HashMap<String,String> readmultipleData(String Sheetname) throws Throwable{
 	FileInputStream fis = new FileInputStream(Ipathconstants.Excelpath);
 	Workbook wb = WorkbookFactory.create(fis);
 	Sheet sh = wb.getSheet(Sheetname);
@@ -103,8 +127,13 @@ public HashMap<String,String>readmultipleData(String Sheetname) throws Throwable
 }
 
 
-	 
-	 
+public void closeExcel() {
+	try {
+		wb.close();
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+}
 
 }
 

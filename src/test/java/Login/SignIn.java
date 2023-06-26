@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 import com.GenericUtilities.FileUtility;
 import com.GenericUtilities.WebdriverUtility;
@@ -15,8 +16,8 @@ import com.GenericUtilities.WebdriverUtility;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SignIn {
-
-	public static void main(String[] args) throws Throwable {
+@Test
+	public  void login(String[] args) throws Throwable {
 WebDriverManager.chromedriver().setup();
 WebDriver driver=new ChromeDriver();
 /*

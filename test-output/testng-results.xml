@@ -1,169 +1,431 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="3" ignored="0" total="4" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="0" skipped="2">
   <reporter-output>
+    <line>
+      <![CDATA[connect to DB]]>
+    </line>
+    <line>
+      <![CDATA[Productview-----> Testscript execution started]]>
+    </line>
+    <line>
+      <![CDATA[Testscript execution Skipped]]>
+    </line>
+    <line>
+      <![CDATA[addtowisList-----> Testscript execution started]]>
+    </line>
+    <line>
+      <![CDATA[Testscript execution Skipped]]>
+    </line>
   </reporter-output>
-  <suite started-at="2023-04-03T10:06:08 IST" name="Suite" finished-at="2023-04-03T10:06:08 IST" duration-ms="46">
+  <suite started-at="2023-06-20T16:02:28 IST" name="Suite" finished-at="2023-06-20T16:10:42 IST" duration-ms="494638">
     <groups>
     </groups>
-    <test started-at="2023-04-03T10:06:08 IST" name="Test" finished-at="2023-04-03T10:06:08 IST" duration-ms="46">
-      <class name="Logout.ForItranformEx">
-        <test-method retried="true" signature="create()[pri:0, instance:Logout.ForItranformEx@5a63f509]" started-at="2023-04-03T10:06:08 IST" name="create" finished-at="2023-04-03T10:06:08 IST" duration-ms="8" status="SKIP">
-          <exception class="java.lang.AssertionError">
+    <test started-at="2023-06-20T16:02:28 IST" name="Test1" finished-at="2023-06-20T16:06:30 IST" duration-ms="242080">
+      <class name="MyAccount.ProductviewpomTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:MyAccount.ProductviewpomTest@1d9b7cce]" started-at="2023-06-20T16:02:28 IST" name="openBrowser" finished-at="2023-06-20T16:06:30 IST" duration-ms="241822" status="FAIL">
+          <exception class="io.github.bonigarcia.wdm.config.WebDriverManagerException">
             <message>
-              <![CDATA[null]]>
+              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.fail(Assert.java:106)
-at Logout.ForItranformEx.create(ForItranformEx.java:12)
+              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1422)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1203)
+at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1438)
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1419)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1203)
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1412)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1203)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:418)
+at com.GenericUtilities.BaseClass.openBrowser(BaseClass.java:40)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:794)
 at org.testng.TestRunner.run(TestRunner.java:596)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
+at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1576)
+at io.github.bonigarcia.wdm.managers.ChromeDriverManager.getDriverUrls(ChromeDriverManager.java:103)
+at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1443)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1278)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1197)
+... 33 more
+Caused by: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
+at java.base/sun.security.ssl.SSLSocketImpl.handleEOF(SSLSocketImpl.java:1715)
+at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1514)
+at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1421)
+at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:273)
+at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:241)
+at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:89)
+at io.github.bonigarcia.wdm.online.HttpClient.execute(HttpClient.java:158)
+at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1561)
+... 37 more
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:483)
+at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160)
+at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1506)
+... 65 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- io.github.bonigarcia.wdm.config.WebDriverManagerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- create -->
-        <test-method retried="true" signature="create()[pri:0, instance:Logout.ForItranformEx@5a63f509]" started-at="2023-04-03T10:06:08 IST" name="create" finished-at="2023-04-03T10:06:08 IST" duration-ms="1" status="SKIP">
-          <exception class="java.lang.AssertionError">
+        </test-method> <!-- openBrowser -->
+        <test-method is-config="true" signature="login()[pri:0, instance:MyAccount.ProductviewpomTest@1d9b7cce]" started-at="2023-06-20T16:06:30 IST" name="login" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1687257390371" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="Productview()[pri:0, instance:MyAccount.ProductviewpomTest@1d9b7cce]" started-at="2023-06-20T16:06:30 IST" name="Productview" finished-at="2023-06-20T16:06:30 IST" duration-ms="0" status="SKIP">
+          <exception class="io.github.bonigarcia.wdm.config.WebDriverManagerException">
             <message>
-              <![CDATA[null]]>
+              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.fail(Assert.java:106)
-at Logout.ForItranformEx.create(ForItranformEx.java:12)
+              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1422)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1203)
+at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1438)
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1419)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1203)
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1412)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1203)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:418)
+at com.GenericUtilities.BaseClass.openBrowser(BaseClass.java:40)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:794)
 at org.testng.TestRunner.run(TestRunner.java:596)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
+at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1576)
+at io.github.bonigarcia.wdm.managers.ChromeDriverManager.getDriverUrls(ChromeDriverManager.java:103)
+at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1443)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1278)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1197)
+... 33 more
+Caused by: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
+at java.base/sun.security.ssl.SSLSocketImpl.handleEOF(SSLSocketImpl.java:1715)
+at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1514)
+at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1421)
+at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:273)
+at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:241)
+at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:89)
+at io.github.bonigarcia.wdm.online.HttpClient.execute(HttpClient.java:158)
+at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1561)
+... 37 more
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:483)
+at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160)
+at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1506)
+... 65 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- io.github.bonigarcia.wdm.config.WebDriverManagerException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Testscript execution Skipped]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Productview -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:MyAccount.ProductviewpomTest@1d9b7cce]" started-at="2023-06-20T16:06:30 IST" name="logout" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1687257390385" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- create -->
-        <test-method retried="true" signature="create()[pri:0, instance:Logout.ForItranformEx@5a63f509]" started-at="2023-04-03T10:06:08 IST" name="create" finished-at="2023-04-03T10:06:08 IST" duration-ms="1" status="SKIP">
-          <exception class="java.lang.AssertionError">
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:MyAccount.ProductviewpomTest@1d9b7cce]" started-at="2023-06-20T16:06:30 IST" name="closeBrowser" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1687257390386" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- MyAccount.ProductviewpomTest -->
+    </test> <!-- Test1 -->
+    <test started-at="2023-06-20T16:06:30 IST" name="Test2" finished-at="2023-06-20T16:10:42 IST" duration-ms="252299">
+      <class name="Wishlist.AddtowishlistpomTest">
+        <test-method is-config="true" signature="connecttoDB()[pri:0, instance:Wishlist.AddtowishlistpomTest@79e2c065]" started-at="2023-06-20T16:02:28 IST" name="connecttoDB" finished-at="2023-06-20T16:02:28 IST" duration-ms="148" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[connect to DB]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- connecttoDB -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:Wishlist.AddtowishlistpomTest@79e2c065]" started-at="2023-06-20T16:06:30 IST" name="openBrowser" finished-at="2023-06-20T16:10:42 IST" duration-ms="252288" status="FAIL">
+          <exception class="io.github.bonigarcia.wdm.config.WebDriverManagerException">
             <message>
-              <![CDATA[null]]>
+              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.fail(Assert.java:106)
-at Logout.ForItranformEx.create(ForItranformEx.java:12)
+              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1422)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1203)
+at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1438)
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1419)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1203)
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1412)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1203)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:418)
+at com.GenericUtilities.BaseClass.openBrowser(BaseClass.java:40)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:794)
 at org.testng.TestRunner.run(TestRunner.java:596)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
+at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1576)
+at io.github.bonigarcia.wdm.managers.ChromeDriverManager.getDriverUrls(ChromeDriverManager.java:103)
+at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1443)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1278)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1197)
+... 33 more
+Caused by: java.net.UnknownHostException: chromedriver.storage.googleapis.com
+at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1524)
+at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1381)
+at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
+at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:118)
+at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:89)
+at io.github.bonigarcia.wdm.online.HttpClient.execute(HttpClient.java:158)
+at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1561)
+... 37 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- io.github.bonigarcia.wdm.config.WebDriverManagerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- create -->
-        <test-method signature="create()[pri:0, instance:Logout.ForItranformEx@5a63f509]" started-at="2023-04-03T10:06:08 IST" name="create" finished-at="2023-04-03T10:06:08 IST" duration-ms="1" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        </test-method> <!-- openBrowser -->
+        <test-method signature="addtowisList()[pri:0, instance:Wishlist.AddtowishlistpomTest@79e2c065]" started-at="2023-06-20T16:10:42 IST" name="addtowisList" finished-at="2023-06-20T16:10:42 IST" duration-ms="0" status="SKIP">
+          <exception class="io.github.bonigarcia.wdm.config.WebDriverManagerException">
             <message>
-              <![CDATA[null]]>
+              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.fail(Assert.java:106)
-at Logout.ForItranformEx.create(ForItranformEx.java:12)
+              <![CDATA[io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1422)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1203)
+at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1438)
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1419)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1203)
+at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1412)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1203)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:418)
+at com.GenericUtilities.BaseClass.openBrowser(BaseClass.java:40)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:794)
 at org.testng.TestRunner.run(TestRunner.java:596)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.UnknownHostException: chromedriver.storage.googleapis.com
+at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1576)
+at io.github.bonigarcia.wdm.managers.ChromeDriverManager.getDriverUrls(ChromeDriverManager.java:103)
+at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1443)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1278)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1197)
+... 33 more
+Caused by: java.net.UnknownHostException: chromedriver.storage.googleapis.com
+at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1524)
+at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1381)
+at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1305)
+at org.apache.hc.client5.http.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:43)
+at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:118)
+at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:89)
+at io.github.bonigarcia.wdm.online.HttpClient.execute(HttpClient.java:158)
+at io.github.bonigarcia.wdm.WebDriverManager.getDriversFromXml(WebDriverManager.java:1561)
+... 37 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- io.github.bonigarcia.wdm.config.WebDriverManagerException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Testscript execution Skipped]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- addtowisList -->
+        <test-method is-config="true" signature="login()[pri:0, instance:Wishlist.AddtowishlistpomTest@79e2c065]" started-at="2023-06-20T16:10:42 IST" name="login" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1687257642941" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- create -->
-      </class> <!-- Logout.ForItranformEx -->
-    </test> <!-- Test -->
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:Wishlist.AddtowishlistpomTest@79e2c065]" started-at="2023-06-20T16:10:42 IST" name="logout" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1687257642944" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:Wishlist.AddtowishlistpomTest@79e2c065]" started-at="2023-06-20T16:10:42 IST" name="closeBrowser" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1687257642945" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="closeDB()[pri:0, instance:Wishlist.AddtowishlistpomTest@79e2c065]" started-at="2023-06-20T16:10:43 IST" name="closeDB" finished-at="2023-06-20T16:10:43 IST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDB -->
+      </class> <!-- Wishlist.AddtowishlistpomTest -->
+    </test> <!-- Test2 -->
   </suite> <!-- Suite -->
 </testng-results>

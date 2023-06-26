@@ -51,6 +51,7 @@ public class ListenerImplementationclass implements ITestListener{
 		try {
 			String screenshotname=WebdriverUtility.getScreenShot(BaseClass.sdriver,result.getMethod().getMethodName());
 			test.addScreenCaptureFromPath(screenshotname);
+		
 			
 		
 			

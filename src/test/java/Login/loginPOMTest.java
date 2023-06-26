@@ -1,20 +1,13 @@
 package Login;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.GenericUtilities.BaseClass;
-import com.GenericUtilities.DatabaseUtility;
-import com.GenericUtilities.ExcelUtility;
 import com.GenericUtilities.FileUtility;
-import com.GenericUtilities.JavaUtility;
-import com.GenericUtilities.WebdriverUtility;
 
 import PomObject.Loginpage;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class loginPOMTest  extends BaseClass{
+public final class loginPOMTest  extends BaseClass{
+	private loginPOMTest() {}
 	/*
 	public static void main(String[]args) throws Throwable {
 		
@@ -59,7 +52,7 @@ public class loginPOMTest  extends BaseClass{
 			
 		
 	//for just to check whether user can able to create the account at this time we have to comment @before method in base class which for login so
-	@Test(groups ="Smoke Test" )
+	@Test
 	public void SignIN() throws Throwable {
 		FileUtility fug=new FileUtility();
 		String URL = fug.readdatafromProperty("url");

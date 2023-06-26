@@ -1,6 +1,7 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.GenericUtilities.ABC;
 import com.GenericUtilities.DatabaseUtility;
 import com.GenericUtilities.ExcelUtility;
 import com.GenericUtilities.FileUtility;
@@ -10,7 +11,7 @@ import com.GenericUtilities.WebdriverUtility;
 import PomObject.Loginpage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class loginPOM {
+public final class loginPOM {
 	public static void main(String[]args) throws Throwable {
 		DatabaseUtility du=new DatabaseUtility();
 		ExcelUtility eu=new ExcelUtility();
@@ -19,7 +20,7 @@ public class loginPOM {
 		WebdriverUtility wdu=new WebdriverUtility();
 		
 		
-		String URL = fug.readdatafromProperty("url");
+		@ABC String URL = fug.readdatafromProperty("url");
 		String UN = fug.readdatafromProperty("username");
 		String PWD = fug.readdatafromProperty("password");
 		String FN = fug.readdatafromProperty("fullname");
